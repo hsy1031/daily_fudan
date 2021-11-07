@@ -99,6 +99,8 @@ class Fudan:
                         html.xpath("/html/body/form/input/@value")
                 )
         )
+        print(self.uid)
+        print(self.psw)
 
         headers = {
             "Host"      : "uis.fudan.edu.cn",
@@ -252,7 +254,7 @@ if __name__ == '__main__':
         uname = IYUU_TOKE[1]
         pwd = IYUU_TOKE[2]
         IYUU_TOKE = IYUU_TOKE[0]
-        if IYUU_TOKE.startswith('IYUU'):
+        if IYUU_TOKE.startswith('123IYUU'):
             iy_info = iyuu(IYUU_TOKE)
         else:
             def iy_info(text, desp=""):
